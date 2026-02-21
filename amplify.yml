@@ -4,12 +4,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd ai-learning-platform
-        - npm ci
+        - npm ci --prefix ai-learning-platform
     build:
       commands:
-        - cd ai-learning-platform
-        - npm run build
+        - npm run build --prefix ai-learning-platform
 
   artifacts:
     baseDirectory: ai-learning-platform/build
