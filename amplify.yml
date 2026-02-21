@@ -1,0 +1,21 @@
+version: 1
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd ai-learning-platform
+        - npm ci
+    build:
+      commands:
+        - cd ai-learning-platform
+        - npm run build
+
+  artifacts:
+    baseDirectory: ai-learning-platform/build
+    files:
+      - '**/*'
+
+  cache:
+    paths:
+      - ai-learning-platform/node_modules/**/*
